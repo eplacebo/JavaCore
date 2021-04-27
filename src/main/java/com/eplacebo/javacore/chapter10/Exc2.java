@@ -5,8 +5,8 @@ public class Exc2 {
         int d, a;
 
         try {
-            d=0;
-            a=42/d;
+            d = 0;
+            a = 42 / d;
             System.out.println("Не будет выведено!");
         } catch (ArithmeticException e) {
             System.out.println("Деление на ноль");
