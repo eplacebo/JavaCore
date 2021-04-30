@@ -1,7 +1,7 @@
 package com.eplacebo.javacore.chapter15;
 
-class MyStringOps {
-    static String strReverse(String str) {
+class MyStringOps2 {
+    String strReverse(String str) {
         String result = "";
         int i;
 
@@ -12,8 +12,7 @@ class MyStringOps {
     }
 }
 
-
-public class MethodRefDemo {
+public class MethodRefDemo2 {
     static String stringOp(StringFunc sf, String s) {
         return sf.func(s);
     }
@@ -22,7 +21,10 @@ public class MethodRefDemo {
         String inStr = "Лямбда-выражения повышают эффективность Java";
         String outStr;
 
-        outStr = stringOp(MyStringOps::strReverse, inStr);
+        MyStringOps2 stringOps = new MyStringOps2();
+
+
+        outStr = stringOp(stringOps::strReverse, inStr);
 
         System.out.println("Исходная строка: " + inStr);
         System.out.println("Обращенная строка: " + outStr);
