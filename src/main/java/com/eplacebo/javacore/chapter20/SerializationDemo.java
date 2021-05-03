@@ -8,7 +8,6 @@ public class SerializationDemo {
         try (ObjectOutputStream objOStrm = new ObjectOutputStream(new FileOutputStream("serial"))) {
             MyClassS object1 = new MyClassS("Hello", -7, 2.7e10, 22.2);
             System.out.println("object1: " + object1);
-
             objOStrm.writeObject(object1);
 
         } catch (IOException e) {
