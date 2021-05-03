@@ -4,6 +4,7 @@ import java.io.*;
 
 public class DataIODemo {
     public static void main(String[] args) {
+
         try (DataOutputStream dout = new DataOutputStream(new FileOutputStream("C:\\Eplacebo\\java\\JavaCore\\src\\main\\java\\com\\eplacebo\\javacore\\chapter20\\Test.dat"))) {
             dout.writeDouble(98.6);
             dout.writeInt(1000);
@@ -19,7 +20,6 @@ public class DataIODemo {
             double d = din.readDouble();
             int i = din.readInt();
             boolean b = din.readBoolean();
-
             System.out.println("Получаемые значения: " + d + " " + i + " " + b);
         } catch (FileNotFoundException e) {
             System.out.println("Нельзя открыть файл ввода ");
